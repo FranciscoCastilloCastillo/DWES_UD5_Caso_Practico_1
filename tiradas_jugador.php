@@ -20,6 +20,10 @@
         //Creamos un nuevo dado
         $dado = new Dado();
 
+        //Comprobamos las condiciones de que no sea inferior a 0 ni superior a 20
+        $dado->setMaxNumDado(20);
+        $dado->setMaxNumDado(-20);
+
         //Evitamos el texto de tirada 0. Va desde 1 hasta 12
         $tirada = 1;
 
@@ -38,3 +42,4 @@
     </footer>
   </body>
 </html>
+
