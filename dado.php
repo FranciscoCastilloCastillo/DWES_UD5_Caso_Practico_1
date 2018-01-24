@@ -16,7 +16,9 @@ class Dado{
   }
 
   public function setMinNumDado($MinNumDado){
-    $this->minNumDado = $MinNumDado;
+    if($MinNumDado>=0 && $MinNumDado<$this->maxNumDado){
+      $this->minNumDado = $MinNumDado;
+    }
   }
 
   public function getMaxNumDado(){
@@ -24,7 +26,9 @@ class Dado{
   }
 
   public function setMaxNumDado($MaxNumDado){
-    $this->maxNumDado = $MaxNumDado;
+    if($MaxNumDado<=12 && $MaxNumDado>$this->minNumDado){
+      $this->maxNumDado = $MaxNumDado;
+    }
   }
 
   /**
@@ -36,3 +40,4 @@ class Dado{
 }
 
 ?>
+
